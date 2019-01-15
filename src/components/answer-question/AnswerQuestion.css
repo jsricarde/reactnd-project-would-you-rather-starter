@@ -1,0 +1,13 @@
+.answer-question-form {
+  max-width: 300px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.answer-question-form-button {
+  width: 100%;
+}
+
+.avatar-answer {
+  margin-top: 0.5rem !important;
+}

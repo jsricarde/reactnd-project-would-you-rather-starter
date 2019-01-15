@@ -1,0 +1,20 @@
+.logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255,255,255,.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.avatar-nav {
+  margin-left: 0.5rem !important;
+}
+
+.btn-logout-nav {
+  margin-left: 0.5rem !important;
+}
+
+.user-nav {
+  position: absolute !important;
+  right: 1%;
+}

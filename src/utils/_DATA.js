@@ -2,7 +2,7 @@ let users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL: ,
+    avatarURL: 'https://firebasestorage.googleapis.com/v0/b/walletkids-a6f52.appspot.com/o/superheroe-woman.png?alt=media&token=fbece690-f779-4f50-b3ec-130c3dd18027',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -14,7 +14,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: ,
+    avatarURL: 'https://firebasestorage.googleapis.com/v0/b/walletkids-a6f52.appspot.com/o/superheroe-men-black.png?alt=media&token=e9867d34-9825-47b7-8855-dc85cd9a2101',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: ,
+    avatarURL: 'https://firebasestorage.googleapis.com/v0/b/walletkids-a6f52.appspot.com/o/superhero-men-blond.png?alt=media&token=bddc9720-b120-4787-b17d-c7bd2d2450a6',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
@@ -157,7 +157,7 @@ export function _saveQuestion (question) {
         ...questions,
         [formattedQuestion.id]: formattedQuestion
       }
-      
+
       users = {
         ...users,
         [authedUser]: {
