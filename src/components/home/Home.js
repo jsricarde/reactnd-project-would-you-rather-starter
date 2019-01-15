@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Tabs} from 'antd';
 import {connect} from 'react-redux'
 import Question from '../question/Question'
@@ -10,24 +10,21 @@ const unansweredQuestions = (questions, answers) => {
   return questions.filter(id => !answers.includes(id));
 }
 
-class Home extends Component {
-
-  render() {
-    return (
-      <Tabs defaultActiveKey="1">
-        <TabPane tab="Unanswered" key="1">
-          {this.props.questionIdsUnanswered.map((id) => (
-            <Question key={id} id={id} type="unanswered" />
-          ))}
-        </TabPane>
-        <TabPane tab="Answered" key="2">
-          {this.props.questionIdsAnswered.map((id) => (
-            <Question key={id} id={id} type="answered" />
-          ))}
-        </TabPane>
-      </Tabs>
-    );
-  }
+const Home = props => {
+  return (
+    <Tabs defaultActiveKey="1">
+      <TabPane tab="Unanswered" key="1">
+        {props.questionIdsUnanswered.map((id) => (
+          <Question key={id} id={id} type="unanswered" />
+        ))}
+      </TabPane>
+      <TabPane tab="Answered" key="2">
+        {props.questionIdsAnswered.map((id) => (
+          <Question key={id} id={id} type="answered" />
+        ))}
+      </TabPane>
+    </Tabs>
+  );
 }
 
 function mapStateToProps({questions, authedUser, users}) {

@@ -1,18 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {connect} from 'react-redux'
 import Player from '../player/Player'
 
-class LeaderBoard extends Component {
-  render() {
-    return (
-      <div>
-        {this.props.userIds.map((id) => (
-          <Player key={id} id={id} />
-        ))}
-      </div>
-    );
-  }
+const LeaderBoard = props => {
+  return (
+    <div>
+      {props.userIds.map((id) => (
+        <Player key={id} id={id} />
+      ))}
+    </div>
+  );
 }
+
 
 function mapStateToProps({users}) {
   const userIds = Object.keys(users)
