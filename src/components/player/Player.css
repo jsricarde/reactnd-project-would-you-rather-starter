@@ -1,0 +1,10 @@
+.name-player,
+.question-section-player,
+.title-score-player,
+.amount-score-player {
+  text-align: center;
+}
+
+.avatar-player{
+  margin-top: 30% !important;
+}

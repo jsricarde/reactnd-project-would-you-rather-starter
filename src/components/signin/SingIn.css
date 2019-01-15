@@ -1,0 +1,10 @@
+.signin-form {
+  text-align: center;
+  width: 400px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.signin-form-button, .signin-form-select {
+  width: 100% !important;
+}

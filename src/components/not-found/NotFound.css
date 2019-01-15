@@ -1,0 +1,11 @@
+.section-not-found {
+  height: 50rem;
+  background: no-repeat center url("https://firebasestorage.googleapis.com/v0/b/walletkids-a6f52.appspot.com/o/error-404.jpg?alt=media&token=2ef9ca03-acd0-4620-92a4-1ff56f7d0537")
+}
+
+.not-found-links {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 46%;
+}
