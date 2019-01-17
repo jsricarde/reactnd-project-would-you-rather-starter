@@ -1,6 +1,6 @@
 import React from 'react';
-import {Tabs} from 'antd';
-import {connect} from 'react-redux'
+import { Tabs } from 'antd';
+import { connect } from 'react-redux'
 import Question from '../question/Question'
 import './Home.css'
 
@@ -27,11 +27,11 @@ const Home = props => {
   );
 }
 
-function mapStateToProps({questions, authedUser, users}) {
-  const user = users[authedUser]
+function mapStateToProps({ questions, authedUser, users }) {
+  const user = users[ authedUser ]
   const questionIds = Object.keys(questions)
-    .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
-  const questionIdsAnswered = Object.keys(user.answers);
+    .sort((a, b) => questions[ b ].timestamp - questions[ a ].timestamp)
+  const questionIdsAnswered = Object.keys(user.answers).reverse();
   const questionIdsUnanswered = unansweredQuestions(questionIds, questionIdsAnswered)
   return {
     questionIdsUnanswered,
