@@ -9,7 +9,7 @@ const NotFound = props => {
       <div className="not-found-links">
         <Link to="/" ><Button>Return to Home</Button></Link>
         <p>Or</p>
-        <Link to="/singin" > <Button>Sign In again</Button></Link>
+        <Link to="/signin" > <Button>Sign In again</Button></Link>
       </div>
     </div>
   );

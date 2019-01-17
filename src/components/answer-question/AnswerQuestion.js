@@ -4,7 +4,7 @@ import {
   Form, Button, Radio, Row, Col, Avatar
 } from 'antd';
 import {handleAddQuestionAnswer} from '../../actions/questions'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Redirect} from 'react-router-dom'
 import NotFound from '../not-found/NotFound'
 
 import './AnswerQuestion.css'
@@ -60,7 +60,7 @@ class AnswerQuestion extends Component {
         </Button>
             </Form.Item>
           </Form>
-        ) : <NotFound />}
+      ) : <Redirect to="notfound" />}
       </Fragment>
     );
   }

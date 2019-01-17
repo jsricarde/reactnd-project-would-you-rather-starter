@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import {connect} from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import {Avatar, Card, Progress, Tag, Row, Col} from 'antd'
-import NotFound from '../not-found/NotFound'
 import './ResultQuestion.css'
 
 const ResultQuestion = props => {
@@ -32,6 +32,7 @@ const ResultQuestion = props => {
                 title={`${question.optionOne.text}?`}>
                 {answer === 'optionOne' && <Tag color="gold">Your vote</Tag>}
                 <Progress percent={optionOnePercent} showInfo={true} />
+                <p>Votes: {question.optionOne.votes.length}</p>
               </Card>
               <Card
                 style={{marginTop: 16}}
@@ -39,11 +40,12 @@ const ResultQuestion = props => {
                 title={`${question.optionTwo.text}?`}>
                 {answer === 'optionTwo' && <Tag color="gold">Your vote</Tag>}
                 <Progress percent={optionTwoPercent} showInfo={true} />
+                <p>Votes: {question.optionTwo.votes.length}</p>
               </Card>
             </Col>
           </Row>
         </Card>
-      ) : <NotFound />}
+      ) : <Redirect to="notfound" />}
     </Fragment>
 
   );

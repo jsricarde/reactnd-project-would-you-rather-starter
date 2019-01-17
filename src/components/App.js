@@ -31,7 +31,7 @@ class App extends Component {
                 <Route path='/questions/:id/unanswered' component={AnswerQuestion} />
                 <Route path='/add' component={NewQuestion} />
                 <Route path='/leaderboard' component={LeaderBoard} />
-                <Route path='/singin' component={SingIn} />
+                <Route path='/signin' component={SingIn} />
                 <Route component={NotFound} />
             </Switch>}
         </Fragment>
